@@ -78,7 +78,7 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 		NSString *obj = [array objectAtIndex:i];
 		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
 	}
-	//[url appendFormat:@"&sign=%@", hash];
+	
     
 	return url;
 
@@ -222,8 +222,9 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 	[self setObject:@"iid,title,click_url" forKey:@"fields"];
 	[self setObject:@"json" forKey:@"format"];
 	[self setObject:@"59miao.items.search" forKey:@"method"];
-	[self setObject:@"2.0" forKey:@"v"];
-
+	[self setObject:@"1.1" forKey:@"v"];
+    [self setObject:@"10" forKey:@"page_size"];
+    
 	NSDate *date = [NSDate date];
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
 	[df setDateFormat:@"YYYY-MM-dd HH:mm:SS"];
