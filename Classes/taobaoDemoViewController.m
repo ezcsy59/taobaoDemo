@@ -9,7 +9,8 @@
 #import "taobaoDemoViewController.h"
 #import "NSMutableDictionaryTaobao.h"
 #import "NSStringEx.h"
-
+#import "ASIHTTPRequest.h"
+#import "SBJSON.h"
 @implementation taobaoDemoViewController
 
 
@@ -58,8 +59,20 @@
 	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSURL *url = [NSURL URLWithString:urlString];
-	NSURLRequest *request = [NSURLRequest requestWithURL:url];
-	[web loadRequest:request];
+//	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//	[web loadRequest:request];
+    
+    //asihttprequest 测试
+    ASIHTTPRequest *ASIrequest = [ASIHTTPRequest requestWithURL:url];
+    [ASIrequest startSynchronous];
+    NSError *error = [ASIrequest error];
+    if(!error){
+       NSString *response = [ASIrequest responseString];
+//        NSLog(response);
+         SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+        NSMutableDictionary *dict = [jsonParser objectWithString:response];
+        NSLog(dict);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
