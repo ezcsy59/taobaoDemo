@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TestViewController : UITableViewController
+#import "CustomCell.h"
+@interface TestViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (retain,nonatomic) NSMutableArray *array;
 

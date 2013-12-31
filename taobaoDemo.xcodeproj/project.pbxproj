@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		04946C7F187255390020488C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04946C7D187255390020488C /* TestViewController.m */; };
 		04946C80187255390020488C /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04946C7E187255390020488C /* TestViewController.xib */; };
+		04946C8F1872852C0020488C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04946C8E1872852C0020488C /* CustomCell.m */; };
+		04946C91187285A70020488C /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04946C90187285A70020488C /* CustomCell.xib */; };
 		049E0D83187148FF00C7BC83 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 049E0D71187148FF00C7BC83 /* ASIAuthenticationDialog.m */; };
 		049E0D84187148FF00C7BC83 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 049E0D74187148FF00C7BC83 /* ASIDownloadCache.m */; };
 		049E0D85187148FF00C7BC83 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 049E0D76187148FF00C7BC83 /* ASIFormDataRequest.m */; };
@@ -51,6 +53,9 @@
 		04946C7C187255390020488C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		04946C7D187255390020488C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		04946C7E187255390020488C /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		04946C8D1872852C0020488C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		04946C8E1872852C0020488C /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		04946C90187285A70020488C /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		049E0D70187148FE00C7BC83 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		049E0D71187148FF00C7BC83 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		049E0D72187148FF00C7BC83 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -220,6 +225,9 @@
 				04946C7C187255390020488C /* TestViewController.h */,
 				04946C7D187255390020488C /* TestViewController.m */,
 				04946C7E187255390020488C /* TestViewController.xib */,
+				04946C8D1872852C0020488C /* CustomCell.h */,
+				04946C8E1872852C0020488C /* CustomCell.m */,
+				04946C90187285A70020488C /* CustomCell.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* taobaoDemoViewController.xib in Resources */,
 				04946C80187255390020488C /* TestViewController.xib in Resources */,
+				04946C91187285A70020488C /* CustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +378,7 @@
 				049E0DBF1871532000C7BC83 /* SBJsonUTF8Stream.m in Sources */,
 				049E0DC01871532000C7BC83 /* SBJsonWriter.m in Sources */,
 				04946C7F187255390020488C /* TestViewController.m in Sources */,
+				04946C8F1872852C0020488C /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,43 +30,9 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     self.navigationItem.title= @"测试";
-    
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 10;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	[dict testDefault];
@@ -84,10 +50,10 @@
     NSError *error = [ASIrequest error];
     if(!error){
         NSString *response = [ASIrequest responseString];
-//        NSLog(response);
+        //        NSLog(response);
         SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
         NSMutableDictionary *dict = [jsonParser objectWithString:response];
-//                NSLog(dict);
+        //                NSLog(dict);
         NSMutableDictionary *itemdic = [dict valueForKey:@"items_search_response"];
         NSMutableDictionary *itemscst =[itemdic valueForKey:@"items_search"];
         
@@ -98,16 +64,71 @@
         
         NSLog(@"已获取到item");
     }
+    
+    
+    [self.tableView reloadData];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60.0;
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//   static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
+//    
+//   static BOOL nibsRegistered = NO;
+//    if (!nibsRegistered) {
+//        UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
+//        [tableView registerNib:nib forCellReuseIdentifier:CustomCellIdentifier];
+//        nibsRegistered = YES;
+//   
+   
+//    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
 
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CustomCellIdentifier";
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell= (CustomCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"CustomCell" owner:self options:nil] objectAtIndex:0];
     }
-    
+
     // Configure the cell...
+    NSMutableDictionary *temp = [self.array objectAtIndex:indexPath.row];
     
+    NSString *title = [temp valueForKey:@"title" ];
+    cell.title.text = title ;
+    
+    NSString *celler = [temp valueForKey:@"seller_name"];
+    cell.subtitle.text = celler ;
     
     return cell;
 }
@@ -164,6 +185,7 @@
      [detailViewController release];
      */
 }
+
 
 
 @end
