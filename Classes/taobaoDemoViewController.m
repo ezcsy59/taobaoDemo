@@ -68,10 +68,11 @@
     NSError *error = [ASIrequest error];
     if(!error){
        NSString *response = [ASIrequest responseString];
-//        NSLog(response);
+        NSLog(response);
+        
          SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
         NSMutableDictionary *dict = [jsonParser objectWithString:response];
-        NSLog(dict);
+//        NSLog(dict);
     }
 }
 

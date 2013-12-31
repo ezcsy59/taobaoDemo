@@ -223,7 +223,7 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 	[self setObject:@"json" forKey:@"format"];
 	[self setObject:@"59miao.items.search" forKey:@"method"];
 	[self setObject:@"1.1" forKey:@"v"];
-    [self setObject:@"1" forKey:@"page_size"];
+    [self setObject:@"20" forKey:@"page_size"];
     [self setObject:@"1" forKey:@"page_no"];
 	NSDate *date = [NSDate date];
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];

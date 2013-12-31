@@ -8,7 +8,7 @@
 
 #import "taobaoDemoAppDelegate.h"
 #import "taobaoDemoViewController.h"
-
+#import "TestViewController.h"
 @implementation taobaoDemoAppDelegate
 
 @synthesize window;
@@ -23,9 +23,13 @@
     // Override point for customization after application launch.
 
     // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
+//    [self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
-
+    TestViewController *test = [[TestViewController alloc] init];
+    
+    UINavigationController *nav= [[UINavigationController alloc] initWithRootViewController:test];
+   
+    [self.window setRootViewController:nav];
     return YES;
 }
 
@@ -79,7 +83,7 @@
 
 
 - (void)dealloc {
-    [viewController release];
+ 
     [window release];
     [super dealloc];
 }
