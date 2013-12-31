@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04331DE61872AC1E00D643DF /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04331DDE1872AC1E00D643DF /* MJRefresh.bundle */; };
+		04331DE71872AC1E00D643DF /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04331DE11872AC1E00D643DF /* MJRefreshBaseView.m */; };
+		04331DE81872AC1E00D643DF /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04331DE31872AC1E00D643DF /* MJRefreshFooterView.m */; };
+		04331DE91872AC1E00D643DF /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04331DE51872AC1E00D643DF /* MJRefreshHeaderView.m */; };
 		04946C7F187255390020488C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04946C7D187255390020488C /* TestViewController.m */; };
 		04946C80187255390020488C /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04946C7E187255390020488C /* TestViewController.xib */; };
 		04946C8F1872852C0020488C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04946C8E1872852C0020488C /* CustomCell.m */; };
@@ -50,6 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04331DDE1872AC1E00D643DF /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		04331DDF1872AC1E00D643DF /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		04331DE01872AC1E00D643DF /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		04331DE11872AC1E00D643DF /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		04331DE21872AC1E00D643DF /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		04331DE31872AC1E00D643DF /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		04331DE41872AC1E00D643DF /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		04331DE51872AC1E00D643DF /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
 		04946C7C187255390020488C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		04946C7D187255390020488C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		04946C7E187255390020488C /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -147,6 +159,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04331DDD1872AC1E00D643DF /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				04331DDE1872AC1E00D643DF /* MJRefresh.bundle */,
+				04331DDF1872AC1E00D643DF /* MJRefresh.h */,
+				04331DE01872AC1E00D643DF /* MJRefreshBaseView.h */,
+				04331DE11872AC1E00D643DF /* MJRefreshBaseView.m */,
+				04331DE21872AC1E00D643DF /* MJRefreshFooterView.h */,
+				04331DE31872AC1E00D643DF /* MJRefreshFooterView.m */,
+				04331DE41872AC1E00D643DF /* MJRefreshHeaderView.h */,
+				04331DE51872AC1E00D643DF /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
 		049E0D6F187148FE00C7BC83 /* ASIHttp */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +286,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				04331DDD1872AC1E00D643DF /* MJRefresh */,
 				049E0D921871532000C7BC83 /* SBJSON */,
 				049E0D6F187148FE00C7BC83 /* ASIHttp */,
 				32CA4F630368D1EE00C91783 /* taobaoDemo_Prefix.pch */,
@@ -340,6 +368,7 @@
 				2899E5220DE3E06400AC0155 /* taobaoDemoViewController.xib in Resources */,
 				04946C80187255390020488C /* TestViewController.xib in Resources */,
 				04946C91187285A70020488C /* CustomCell.xib in Resources */,
+				04331DE61872AC1E00D643DF /* MJRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +408,9 @@
 				049E0DC01871532000C7BC83 /* SBJsonWriter.m in Sources */,
 				04946C7F187255390020488C /* TestViewController.m in Sources */,
 				04946C8F1872852C0020488C /* CustomCell.m in Sources */,
+				04331DE71872AC1E00D643DF /* MJRefreshBaseView.m in Sources */,
+				04331DE81872AC1E00D643DF /* MJRefreshFooterView.m in Sources */,
+				04331DE91872AC1E00D643DF /* MJRefreshHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
